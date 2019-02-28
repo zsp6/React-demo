@@ -29,7 +29,7 @@ class App extends React.Component{
     )
   }
 }
-
+// PureComponent 基础组件，能够帮我阻止数据没有发生变化的情况。（下一次的数据跟上一次相同的情况）
 class Hello extends React.PureComponent {
   render () {
     console.log('hello render');
@@ -39,6 +39,13 @@ class Hello extends React.PureComponent {
       </div>
     )
   }
+  // shouldComponentUpdate (nextProps, nextState) {
+  //   if (nextProps.name !== this.props.name) {
+  //     // 如果 name 有变化，才让更新
+  //     return true;
+  //   }
+  //   return false;
+  // }
 }
 
 ReactDOM.render(<App />,document.getElementById('root'));
